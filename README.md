@@ -12,6 +12,27 @@ If you find bugs, feel free to add them on Github.
 
 For documentation on how to use the Zermelo API please take a look at http://developers.zermelo.nl
 
+Building
+========
+
+PhoneGap
+--------
+
+The easiest way to build the app both for Android and iOS is using [PhoneGap Build](https://build.phonegap.com). You should create an account
+and add signing keys for the platforms you are interested in. Then you can ZIP the contents of the "www" directory (without actually having
+"www" as a subdirectory). You can then upload this ZIP file to PhoneGap build to build the app.
+
+Building using Apache Cordova
+-----------------------------
+
+You can also use Apache Cordova to build the app:
+
+````bash
+zermelo-app$ cordova platform add android
+
+zermelo-app$ cordova build
+````
+
 License - App
 =============
 

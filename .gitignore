@@ -1,0 +1,10 @@
+*.~*
+originals
+platforms
+plugins
+source.zip
+resources_zermelo
+touch_zermelo
+*.BAK
+*.bak
+*.TMP*

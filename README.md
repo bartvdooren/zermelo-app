@@ -15,7 +15,10 @@ For documentation on how to use the Zermelo API please take a look at http://dev
 Building
 ========
 
-PhoneGap
+The App currently supports Android and iOS. Windows support should not be too hard to add, the main problem is that WebSQL is not supported
+on Windows Phone.
+
+Building using Adobe PhoneGap
 --------
 
 The easiest way to build the app both for Android and iOS is using [PhoneGap Build](https://build.phonegap.com). You should create an account
@@ -32,6 +35,16 @@ zermelo-app$ cordova platform add android
 
 zermelo-app$ cordova build
 ````
+
+Architecture
+============
+
+The app is based on Sencha Touch. The starting point for the app is www/index.html. Then www/app.js is loaded, and this shows the www/app/view/Main.js view.
+This view checks if the app has been linked to the portal, and if not it shows the www/app/view/Login.js view. Otherwise it shows the
+www/app/view/Home.js view. The Home view is the main application, and contains the menu bar and the other views.
+
+The www/js folder contains some supporting libraries. www/js/database.js takes care of storing all appointment and announcement data.
+www/js/fullcalendar.js renders the calendar view.
 
 License - App
 =============

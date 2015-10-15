@@ -10,7 +10,7 @@ license term for the MIT license below, it's just a part of trademark law.
 
 Improvements to the Open Source Edition of the Zermelo app will be merged into the official Zermelo app and be published to the appstores.
 The Zermelo App has about 100.000 installs right now. If you want to share your improvements with all these people please submit a pull request.
-If you find bugs, feel free to add isses on Github.
+If you find bugs, feel free to add issues on Github.
 
 For documentation on how to use the Zermelo API please take a look at http://developers.zermelo.nl
 

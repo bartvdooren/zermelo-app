@@ -123,7 +123,7 @@ Ext.define('Zermelo.view.Home', {
                     title: 'menu.myschedule'
                 },*/
                 docked: 'top',
-                // Add two buttons refresh and new annoucement 
+                // Add two buttons refresh and new announcement
                 items: [{
                     // refresh button
                     xtype: 'button',
@@ -140,7 +140,7 @@ Ext.define('Zermelo.view.Home', {
                     }
                 }]
             }, {
-                // set toolbar with menu, refresh, annoucement buttons
+                // set toolbar with menu, refresh, announcement buttons
                 xtype: 'toolbar',
                 //css class resources/images/app.css
                 cls: 'zermelo-toolbar',
@@ -153,12 +153,12 @@ Ext.define('Zermelo.view.Home', {
                     title: 'menu.daily_schedule'
                 },*/
                 docked: 'top',
-                // Add two buttons refresh and new annoucement 
+                // Add two buttons refresh and new announcement 
                 items: [{
                     // refresh button
                     xtype: 'button',
                     //css class resources/images/app.css
-                 //   iconCls: 'zermelo-refresh-button-' + imageType,
+                    // iconCls: 'zermelo-refresh-button-' + imageType,
                     docked: 'right',
                     ui: 'plain',
                     id:'button_day_refresh',
@@ -245,7 +245,7 @@ Ext.define('Zermelo.view.Home', {
         ]
     }
 });
-// refresh shcedule and announcement 
+// refresh schedule and announcement 
 function refresh() {
     refreshDate=new Date();
     window.localStorage.setItem('refreshTime',refreshDate.getTime());
@@ -255,7 +255,7 @@ function refresh() {
     var startTime = Math.round(currentweekdate.getTime() / 1000);
     var endTime = Math.round(currentweekdate.setDate(currentweekdate.getDate() + 12) / 1000);
 
-    // call appointment api and annoucement api at start
+    // call appointment api and announcement api at start
     getAppointment(Ext.getCmp('schedule'), Ext.getCmp('fullCalendarView'), true, startTime, endTime, true, '', false);
     getAnnoucementData(Ext.getCmp('schedule'))
 }
@@ -273,7 +273,7 @@ function getAnnoucementsData(thisObj) {
 
 	if (accessToken == null || accessToken == '')
 		return;
-    // send request to server using ajax
+    // send request to server using ajax with http GET
     Ext.Ajax.request({
         url: 'https://' + institution + '.zportal.nl/api/v2/announcements?user='+window.localStorage.getItem('user_code')+'&access_token=' + accessToken, // url : this.getUrl(),
         method: "GET",
@@ -292,7 +292,7 @@ function getAnnoucementsData(thisObj) {
 
             localStore = new Zermelo.store.AnnouncementStore();
             localStore.removeAll();
-            // set data into sotre
+            // set data into store
 
             mystore.each(function (record) {
                 var rec = {
@@ -302,7 +302,7 @@ function getAnnoucementsData(thisObj) {
                     title: record.data.title,
                     text: record.data.text, // in a real app you would not update a real field like this!
                 };
-                // add reocrd into localstore one bye one
+                // add record into localstore one bye one
                 localStore.add(rec);
                 localStore.sync(); // The magic! This command persists the records in the store to the browsers localStorage
             });

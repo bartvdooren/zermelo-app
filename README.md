@@ -6,9 +6,11 @@ The goal is to make information from the Zermelo Portal/API easily accessible on
 high priority as tablets are expected access the Zermelo Portal directly.
 
 Please note that Zermelo and the Zermelo logo are trademarks of Zermelo Software B.V. You are not allowed to claim that your version of the app is in any way the official one. Note that this does not constitute an extra
-license term for the MIT license below, it's just a part of trademark law.
+license term for the MIT license below, it's just a part of trademark law. This is also why we've made this version of the app blue.
+You can compare this to the Chromium project that is released by Google as the Chrome browser.
 
-Improvements to the Open Source Edition of the Zermelo app will be merged into the official Zermelo app and be published to the appstores.
+Improvements to the Open Source Edition of the Zermelo app will be published to the app stores as the official Zermelo App.
+The only modifications on our side are to change the color to "Zermelo red".
 The Zermelo App has about 100.000 installs right now. If you want to share your improvements with all these people please submit a pull request.
 If you find bugs, feel free to add issues on Github.
 
